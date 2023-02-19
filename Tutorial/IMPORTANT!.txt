@@ -1,0 +1,5 @@
+Please be sure to use localhost/user configuration/personal.php
+
+also when in localhost/user configuration/login.php and login3.php the get started button will redirect you to the very very front page
+
+Also be sure to change your localhost/phpmyadmin/ account password to 123456

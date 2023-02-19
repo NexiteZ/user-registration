@@ -1,0 +1,201 @@
+Para po mairun ang code na ito kailangan na wampp ang gamit ilagay ang user registration folder sa www sa folder nang wampp
+
+pagkatapos nito irun ang wampp siguraduhin na all 3 services are running and green ito
+
+siguraduhin na ang mga sumusunod na databases are inserted 
+
+siguraduhin na may db_comment database
+siguraduhin na may pendingrequestsystem database
+siguraduhin na may test database
+
+
+sa db_comment database
+add a tbl_user_comments table with a structure of
+1. id int 50 not null auto incremented PRIMARY KEY
+2. username varchar 50 latin1_swedish_ci
+3. message varchar 75 not null latin1_swedish_ci 
+4. create_at_timestamp datetime 
+attributes on update CURRENT_TIMESTAMP
+not null Current_timestamp 
+Extra ON UPDATE CURRENT_TIMESTAMP
+
+sa pendingrequestsystem database
+add a table named accounts with a structure of
+1. ID int 20 not null AUTO INCREMENTED PRIMARY KEY
+2. firstname text not null utf8_general_ci 
+3. lastname text not null utf8_general_ci
+4. email index varchar 255 not null utf8_general_ci
+5. type text utf8_general_ci not null
+6. password varchar 255 not null utf8_general_ci
+
+add a table named requests with a structure of
+1. id int 20 not null auto increment PRIMARY KEY
+2. firstname text utf8_general_ci not null
+3. lastname text utf8_general_ci not null
+4. email index varchar 255 not null utf8_general_ci
+5. password varchar 255 not null utf8_general_ci
+6. message text not null utf8_general_ci
+7. date datetime not null
+
+create table cart in shop_db database
+1. id int 100 not null auto incremented PRIMARY KEY
+2. user_id int 100 not null
+3. name varchar 100 not null utf8mb4_general_ci 
+4. price varchar 100 not null utf8mb4_general_ci
+5. image varchar 100 not null utf8mb4_general_ci
+6. quantity int 100 not null
+
+create table order in shop_db database
+1. id int not null  auto incremented PRIMARY KEY
+2. name varchar 100 not null 
+3. number varchar 100 not null 
+4. email varchar 100 not null 
+5. method varchar 100 not null 
+6. flat varchar 100 not null 
+7. street varchar 100 not null 
+8. city varchar  100 not null 
+9. state varchar 100 not null 
+10. country varchar 100 not null 
+11. pin_code varchar 100 not null 
+12. total_products varchar 100 not null 
+13. total_price varchar 100 not null 
+
+create table user_form in shop_db data base
+1. ID primary key int 100 not null auto increment
+2. name varchar 100 not null
+3. email varchar 100 not null
+4. password varchar 100 not null
+
+create table in shop_db database products1, 2, 3, 4, 5, 6, 7, 8, 9, 10 (seperate tables) no spacing ex. products1, products2
+1. id not null auto increment PRIMARY KEY
+2. name varchar 100 not null
+3. price varchar 100 not null
+4. image varchar 100 not null
+
+insert into products 1
+name Athena Dress Pink
+price 100
+img ad3.jpg
+
+
+insert into products 2
+name Athena Dress Green
+price 100
+img ad2.jpg
+
+insert into products 3
+name Athena Dress Dark Blue
+price 100
+img ad1.jpg
+
+insert into products 4
+name Backless White Dress
+price 100
+img bd1.jpg
+
+insert into products 5
+name Backless Brown Dress
+price 100
+img bd2.jpg
+
+insert into products 6
+name Backless Blue Dress
+price 100
+img bd3.jpg
+
+insert into products 7
+name Brown Pants
+price 100
+img pt1.jpg
+
+insert into products 8
+name Black Pants
+price 100
+img pt2.jpg
+
+insert into products 9
+name Cream Pants
+price 100
+img pt5.jpg
+
+insert into products 10
+name Athena Dress Pink
+Athena Dress Green
+Athena Dark Blue
+Backless White Dress
+Backless Brown Dress
+Backless Blue Dress
+Brown Pants
+Black Pants
+Cream Pants
+
+price
+all 100
+
+image ad3.jpg
+ad2.jpg
+ad1.jpg
+bd1.jpg
+bd2.jpg
+bd3.jpg
+pt1.jpg
+pt2.jpg
+pt5.jpg
+
+create table in test database products 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 (seperate tables)
+1	id Primary	int(11)			AUTO_INCREMENT NOT NULL
+2	product_code Index	varchar(60)	latin1_swedish_ci NOT NULL		
+3	product_name	varchar(60)	latin1_swedish_ci NOT NULL
+4	product_desc	tinytext	latin1_swedish_ci NOT NULL
+5	product_img_name	varchar(60)	latin1_swedish_ci NOT NULL
+6	price		decimal(10,2)	NOT NULL
+
+insert into products 1
+name Athena Dress Pink
+price 100
+product_img_name ad3.jpg
+
+
+insert into products 2
+name Athena Dress Green
+price 100
+product_img_name ad2.jpg
+
+insert into products 3
+name Athena Dress Dark Blue
+price 100
+product_img_name ad1.jpg
+
+insert into products 4
+name Backless White Dress
+price 100
+product_img_name bd1.jpg
+
+insert into products 5
+name Backless Brown Dress
+price 100
+product_img_name bd2.jpg
+
+insert into products 6
+name Backless Blue Dress
+price 100
+product_img_name bd3.jpg
+
+insert into products 7
+name Brown Pants
+price 100
+product_img_name pt1.jpg
+
+insert into products 8
+name Black Pants
+price 100
+product_img_name pt2.jpg
+
+insert into products 9
+name Cream Pants
+price 100
+product_img_name pt5.jpg
+
+
+
+
